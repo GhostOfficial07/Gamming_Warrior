@@ -3,3 +3,95 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    background-image: url(img/Background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*-- HEADER --*/
+.navbar{
+    background: linear-gradient(to right, #252525, #282828);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid rgb(183, 156, 3);
+    transition: 0.2s ease-in-out;
+}
+
+.logo{
+    display: flex;
+    align-items: center;    
+}
+
+.logo img{
+    width: 50px;
+    filter: drop-shadow(1px 1px 1px rgb(183, 156, 3));
+    animation: rotate360 2.5s linear infinite;
+    cursor: pointer;
+}
+
+.logo h5{
+    font-size: 30px;
+    color: white;
+    margin-left: 20px;
+}
+.logo h5 span{
+    color: rgb(183, 156, 3);
+}
+
+.navmenu{
+    padding: 20px;
+}
+
+.navmenu ul{
+    display: flex;
+    list-style: none;
+}
+
+.navmenu ul li{
+    margin-left: 90px;
+    font-size: 25px;
+}
+
+.navmenu ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.btn{
+    background-color: rgb(183, 156, 3);
+    padding: 10px 13px;
+    border: 1px solid #03345f;
+    border-radius: 7px;
+}
+
+.btn a{
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+}
+
+/*-- HOVER EFFECT --*/
+.navbar:hover{
+    box-shadow: 1px 1px 30px #f5f8e1c0;
+}
+
+.navbar ul li a:hover{
+    text-shadow: 1px 1px 15px rgb(255, 218, 6);
+}
+
+.btn:hover{
+    color: gold;
+}
+
+/*-- KEYFRAMES --*/
+@keyframes rotate360 {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
