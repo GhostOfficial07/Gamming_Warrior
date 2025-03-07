@@ -5,18 +5,20 @@
 }
 
 body{
+    position: relative;
     background-image: url(img/Background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-x: hidden;
 }
 
-/*-- HEADER --*/
+/*--------------- HEADER ---------------*/
 .navbar{
-    background: linear-gradient(to right, #252525, #282828);
+    background: linear-gradient(to right, #151515, #282828);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 2px solid rgb(183, 156, 3);
+    border-bottom: 2px solid gold;
     transition: 0.2s ease-in-out;
 }
 
@@ -27,7 +29,7 @@ body{
 
 .logo img{
     width: 50px;
-    filter: drop-shadow(1px 1px 1px rgb(183, 156, 3));
+    filter: drop-shadow(1px 1px 1px gold);
     animation: rotate360 2.5s linear infinite;
     cursor: pointer;
 }
@@ -38,7 +40,7 @@ body{
     margin-left: 20px;
 }
 .logo h5 span{
-    color: rgb(183, 156, 3);
+    color: gold;
 }
 
 .navmenu{
@@ -58,13 +60,14 @@ body{
 .navmenu ul li a{
     text-decoration: none;
     color: white;
+    transition: 0.2s ease-in-out;
 }
 
 .btn{
-    background-color: rgb(183, 156, 3);
+    background-color: gold;
     padding: 10px 13px;
-    border: 1px solid #03345f;
-    border-radius: 7px;
+    border: none;
+    border-radius: 20px;
 }
 
 .btn a{
@@ -73,25 +76,119 @@ body{
     color: black;
 }
 
-/*-- HOVER EFFECT --*/
-.navbar:hover{
-    box-shadow: 1px 1px 30px #f5f8e1c0;
+/*--------------- MAIN ---------------*/
+
+/*-- INTRO --*/
+.intro{
+    position: absolute;
+    top: 350px;
+    left: 350px;
 }
 
-.navbar ul li a:hover{
-    text-shadow: 1px 1px 15px rgb(255, 218, 6);
+.intro h1{
+    color: white;
+    font-size: 70px;
 }
 
-.btn:hover{
+.intro h1 span{
     color: gold;
 }
 
-/*-- KEYFRAMES --*/
+.intro p{
+    color: white;
+    font-size: 20px;
+    width: 600px;
+    margin-top: 40px;
+    animation: marquee 2.5s linear infinite;
+}
+
+.intro button{
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+/*-- NEWS --*/
+.news{
+    position: relative;
+    top: 925px;
+    background-color: #151515;
+    width: 7000px;
+}
+
+.news-headline{
+    display: flex;
+}
+
+.news-headline h1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: gold;
+    color: white;
+    font-size: 30px;
+    width: 500px;
+    text-shadow: 1px 1px 1px black;
+    margin-right: 20px;
+    z-index: 1;
+}
+
+.hot-news{
+    display: flex;
+    padding: 15px;
+    position: relative;
+    animation: marquee 25s linear infinite;
+}
+
+.hot-news button{
+    font-size: 18px;
+}
+
+#btn1{
+    background-color: rgb(243, 114, 243);
+    padding: 2px 15px;
+    color: white;
+    border: none;
+}
+#btn2{
+    background-color: rgb(88, 243, 67);
+    padding: 2px 15px;
+    color: white;
+    border: none;
+}
+#btn3{
+    background-color: rgb(243, 76, 67);
+    padding: 2px 15px;
+    color: white;
+    border: none;
+}
+
+.hot-news p{
+    color: white;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+/*--------------- HOVER EFFECT ---------------*/
+.navmenu ul li a:hover{
+    color: gold;
+}
+
+/*--------------- KEYFRAMES ---------------*/
 @keyframes rotate360 {
     0% {
       transform: rotateY(0deg);
     }
     100% {
       transform: rotateY(360deg);
+    }
+  }
+
+  @keyframes marquee {
+    from {
+        left: 1300px;
+    }
+    to {
+        left: -4500px;
     }
   }
